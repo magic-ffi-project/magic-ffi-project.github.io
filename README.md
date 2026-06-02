@@ -12,15 +12,25 @@ MAGIC develops automotive digital forensics (ADF) solutions to support liability
 
 ## Local development
 
-Prerequisites: Ruby 3.x, Bundler
+Prerequisites: Ruby 3.x
+
+On Ubuntu/Debian, install system dependencies first (required to compile native gem extensions):
 
 ```bash
-gem install jekyll bundler   # one-time setup
-bundle install               # install dependencies
+sudo apt install ruby-dev ruby-bundler build-essential
+```
+
+Then install project gems locally and serve:
+
+```bash
+bundle config set --local path 'vendor/bundle'   # keep gems inside the project
+bundle install                                    # install dependencies
 bundle exec jekyll serve --livereload
 ```
 
 Open http://localhost:4000 to preview the site.
+
+> **Note:** Do not use `gem install jekyll bundler` directly — on most Linux systems this requires root. Use `apt` for bundler and let `bundle install` handle jekyll.
 
 ## Site structure
 
