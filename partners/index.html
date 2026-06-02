@@ -45,8 +45,7 @@
   <header class="site-header">
   <div class="container">
     <a class="site-logo" href="/">
-      <span class="site-logo__acronym">MAGIC</span>
-      <span class="site-logo__tagline">Meeting Automotive Liability<br>Challenges through Forensics</span>
+      <img src="/assets/icons/Logo_MAGIC.png" alt="MAGIC — Meeting Automotive Liability Challenges through Forensics Soundness" class="site-logo__img">
     </a>
 
     <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.site-nav').classList.toggle('is-open')">
@@ -58,7 +57,7 @@
       <a href="/about/">About</a>
       <a href="/work-packages/">Work Packages</a>
       <a href="/partners/" class="active">Partners</a>
-      <a href="/publications/">Publications</a>
+      <a href="/results/">Results</a>
       <a href="/contact/">Contact</a>
     </nav>
   </div>
@@ -88,15 +87,15 @@
     <div class="partner-logo-placeholder">VT</div>
     <span class="partner-role">Coordinator</span>
     <h3>Volvo Technology AB</h3>
-    <p>Project coordinator and WP1 leader. Part of the Volvo Group, Volvo Technology AB provides deep industrial expertise in automotive systems engineering and cybersecurity. Coordinator: Prakash Jayaraman.</p>
+    <p>Project coordinator and WP1 leader. Part of the Volvo Group, Volvo Technology AB provides deep industrial expertise in automotive systems engineering and cybersecurity.</p>
     <a class="partner-link" href="https://www.volvogroup.com/en/" target="_blank" rel="noopener">volvogroup.com &rarr;</a>
   </div>
 
-  <div class="partner-card coordinator">
+  <div class="partner-card">
     <div class="partner-logo-placeholder">CH</div>
-    <span class="partner-role">Vice Coordinator</span>
+    <span class="partner-role">Partner</span>
     <h3>Chalmers University of Technology</h3>
-    <p>Sweden's leading technical university, providing academic leadership, research excellence in cybersecurity, dependable systems, and formal methods. Vice project leader for MAGIC.</p>
+    <p>Sweden's leading technical university, providing academic leadership, research excellence in cybersecurity, dependable systems, and formal methods. WP6 leader for MAGIC.</p>
     <a class="partner-link" href="https://www.chalmers.se/en/" target="_blank" rel="noopener">chalmers.se &rarr;</a>
   </div>
 
@@ -112,7 +111,7 @@
     <div class="partner-logo-placeholder">RI</div>
     <span class="partner-role">Partner</span>
     <h3>RISE Research Institutes of Sweden</h3>
-    <p>Sweden's independent national research institute. WP4 and WP5 leader. Expertise in dependability, cybersecurity, digital forensics, and applied automotive research. RISE contact: <a href="https://www.ri.se/en/person/behrooz-sangchoolie" target="_blank" rel="noopener">Behrooz Sangchoolie</a>.</p>
+    <p>Sweden's independent national research institute. WP4 and WP5 leader. Expertise in dependability, cybersecurity, digital forensics, and applied automotive research.</p>
     <a class="partner-link" href="https://www.ri.se/en" target="_blank" rel="noopener">ri.se &rarr;</a>
   </div>
 
@@ -167,7 +166,7 @@
           <li><a href="/about/">About MAGIC</a></li>
           <li><a href="/work-packages/">Work Packages</a></li>
           <li><a href="/partners/">Partners</a></li>
-          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/results/">Results</a></li>
         </ul>
       </div>
 
@@ -199,6 +198,7 @@
         <span>&#127745;</span>
         <span>Funded by <a href="https://ffisweden.se/en/" target="_blank" rel="noopener">FFI &mdash; Fordonsstrategisk forskning och innovation</a></span>
       </div>
+      <p class="footer-disclaimer">Vinnova is not responsible for the content on this website or any use that may be made of the information it contains.</p>
     </div>
   </div>
 </footer>
@@ -233,11 +233,11 @@
       var typeMatch = bib.match(/^@(\w+)\s*\{/);
       var type = typeMatch ? typeMatch[1].toLowerCase() : '';
       var fields = {};
-      // Match field = {value} or field =  patterns
-      var re = /(\w+)\s*=\s*\{((?:[^{}]|\{[^{}]*\})*)\}/g;
+      // Match field = {value}, field = , or field = "value" patterns
+      var re = /(\w+)\s*=\s*(?:\{((?:[^{}]|\{[^{}]*\})*)\}|"([^"]*)")/g;
       var m;
       while ((m = re.exec(bib)) !== null) {
-        fields[m[1].toLowerCase()] = m[2].trim();
+        fields[m[1].toLowerCase()] = (m[2] !== undefined ? m[2] : m[3]).trim();
       }
       return { type: type, fields: fields };
     }

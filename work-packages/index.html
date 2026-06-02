@@ -45,8 +45,7 @@
   <header class="site-header">
   <div class="container">
     <a class="site-logo" href="/">
-      <span class="site-logo__acronym">MAGIC</span>
-      <span class="site-logo__tagline">Meeting Automotive Liability<br>Challenges through Forensics</span>
+      <img src="/assets/icons/Logo_MAGIC.png" alt="MAGIC — Meeting Automotive Liability Challenges through Forensics Soundness" class="site-logo__img">
     </a>
 
     <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.site-nav').classList.toggle('is-open')">
@@ -58,7 +57,7 @@
       <a href="/about/">About</a>
       <a href="/work-packages/" class="active">Work Packages</a>
       <a href="/partners/">Partners</a>
-      <a href="/publications/">Publications</a>
+      <a href="/results/">Results</a>
       <a href="/contact/">Contact</a>
     </nav>
   </div>
@@ -82,10 +81,6 @@
   <div class="container">
     <p>MAGIC addresses forensic investigations across three operational phases: <strong>pre-operation</strong> (design &amp; development), <strong>on-operation</strong> (vehicle in use), and <strong>post-operation</strong> (after an incident). Two cross-cutting work packages handle management and dissemination.</p>
 
-<div class="callout">
-  All work packages run from M1 to M48 (January 2025 – December 2028).
-</div>
-
 <div class="wp-list">
 
   <div class="wp-item">
@@ -107,8 +102,8 @@
       <h3>Use Cases &amp; Literature Review</h3>
       <p>Identification of industrial needs and use cases, state-of-the-art analysis, and gap identification in current ADF practices.</p>
       <ul>
-        <li><strong>T2.1:</strong> Identification and prioritization of industrial use cases through stakeholder interviews (accident investigators, OEM engineers, law enforcement). <em>Leads to D2.1.</em></li>
-        <li><strong>T2.2:</strong> Literature review covering ADF, IoT, CPS, and avionics — with gap analysis and future guidelines. <em>Leads to D2.2.</em></li>
+        <li><strong>T2.1:</strong> Identification and prioritization of industrial use cases through stakeholder interviews (accident investigators, OEM engineers, law enforcement).</li>
+        <li><strong>T2.2:</strong> Literature review covering ADF, IoT, CPS, and avionics — with gap analysis and future guidelines.</li>
       </ul>
     </div>
   </div>
@@ -119,7 +114,7 @@
       <h3>Pre-Operation — ADF Architecture</h3>
       <p>Design of a reference architecture for forensically enabled vehicles, covering secure logging, secure storage, and software update mechanisms.</p>
       <ul>
-        <li><strong>T3.1:</strong> Reference architecture and guidelines — defining vital components, requirements, and interplay between ADF, Hybrid IDS, secure logging, secure storage, and OTA updates. Guidelines for ADF data management and governance, focused on GDPR compliance and the CIA security triad. <em>Leads to D3.1.</em></li>
+        <li><strong>T3.1:</strong> Reference architecture and guidelines — defining vital components, requirements, and interplay between ADF, Hybrid IDS, secure logging, secure storage, and OTA updates. Guidelines for ADF data management and governance, focused on GDPR compliance and the CIA security triad.</li>
       </ul>
     </div>
   </div>
@@ -130,8 +125,8 @@
       <h3>On-Operation — Threat Detection &amp; Data Collection</h3>
       <p>Forensic soundness, real-time threat detection via AI-driven IDS, and forensically sound data collection during vehicle operation.</p>
       <ul>
-        <li><strong>T4.1:</strong> Forensic soundness and data collection strategies — anomaly and tampering detection, anti-forensic protection, ISO/IEC 27037:2012 compliance, bandwidth and data integrity management. <em>Leads to D4.1.</em></li>
-        <li><strong>T4.2:</strong> Enhanced IDS methodologies — real-time adaptation, automatic rule generation via OTA, XAI for transparency, adversarial training, event correlation matrices. <em>Leads to D4.2.</em></li>
+        <li><strong>T4.1:</strong> Forensic soundness and data collection strategies — anomaly and tampering detection, anti-forensic protection, ISO/IEC 27037:2012 compliance, bandwidth and data integrity management.</li>
+        <li><strong>T4.2:</strong> Enhanced IDS methodologies — real-time adaptation, automatic rule generation via OTA, XAI for transparency, adversarial training, event correlation matrices.</li>
       </ul>
     </div>
   </div>
@@ -142,9 +137,9 @@
       <h3>Post-Operation — Digital Evidence Management</h3>
       <p>Management and analysis of digital forensic evidence, IDS maintainability, and adaptive cyber-resilience mechanisms post-incident.</p>
       <ul>
-        <li><strong>T5.1:</strong> Forensically sound management of digital evidence — identification, collection, acquisition, and preservation per ISO/IEC 27037:2012. <em>Leads to D5.1.</em></li>
-        <li><strong>T5.2:</strong> ADF and IDS maintainability — online adaptation, OTA update management, data lifecycle management. <em>Leads to D5.2.</em></li>
-        <li><strong>T5.3:</strong> Resilient ADF mechanisms and metrics — evaluation of resilience under cyber-attacks. <em>Leads to D5.3.</em></li>
+        <li><strong>T5.1:</strong> Forensically sound management of digital evidence — identification, collection, acquisition, and preservation per ISO/IEC 27037:2012.</li>
+        <li><strong>T5.2:</strong> ADF and IDS maintainability — online adaptation, OTA update management, data lifecycle management.</li>
+        <li><strong>T5.3:</strong> Resilient ADF mechanisms and metrics — evaluation of resilience under cyber-attacks.</li>
       </ul>
     </div>
   </div>
@@ -187,7 +182,7 @@
           <li><a href="/about/">About MAGIC</a></li>
           <li><a href="/work-packages/">Work Packages</a></li>
           <li><a href="/partners/">Partners</a></li>
-          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/results/">Results</a></li>
         </ul>
       </div>
 
@@ -219,6 +214,7 @@
         <span>&#127745;</span>
         <span>Funded by <a href="https://ffisweden.se/en/" target="_blank" rel="noopener">FFI &mdash; Fordonsstrategisk forskning och innovation</a></span>
       </div>
+      <p class="footer-disclaimer">Vinnova is not responsible for the content on this website or any use that may be made of the information it contains.</p>
     </div>
   </div>
 </footer>
@@ -253,11 +249,11 @@
       var typeMatch = bib.match(/^@(\w+)\s*\{/);
       var type = typeMatch ? typeMatch[1].toLowerCase() : '';
       var fields = {};
-      // Match field = {value} or field =  patterns
-      var re = /(\w+)\s*=\s*\{((?:[^{}]|\{[^{}]*\})*)\}/g;
+      // Match field = {value}, field = , or field = "value" patterns
+      var re = /(\w+)\s*=\s*(?:\{((?:[^{}]|\{[^{}]*\})*)\}|"([^"]*)")/g;
       var m;
       while ((m = re.exec(bib)) !== null) {
-        fields[m[1].toLowerCase()] = m[2].trim();
+        fields[m[1].toLowerCase()] = (m[2] !== undefined ? m[2] : m[3]).trim();
       }
       return { type: type, fields: fields };
     }

@@ -45,8 +45,7 @@
   <header class="site-header">
   <div class="container">
     <a class="site-logo" href="/">
-      <span class="site-logo__acronym">MAGIC</span>
-      <span class="site-logo__tagline">Meeting Automotive Liability<br>Challenges through Forensics</span>
+      <img src="/assets/icons/Logo_MAGIC.png" alt="MAGIC — Meeting Automotive Liability Challenges through Forensics Soundness" class="site-logo__img">
     </a>
 
     <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.site-nav').classList.toggle('is-open')">
@@ -58,7 +57,7 @@
       <a href="/about/" class="active">About</a>
       <a href="/work-packages/">Work Packages</a>
       <a href="/partners/">Partners</a>
-      <a href="/publications/">Publications</a>
+      <a href="/results/">Results</a>
       <a href="/contact/">Contact</a>
     </nav>
   </div>
@@ -88,7 +87,7 @@
 
 <p>The vehicle industry has a long tradition of working actively with safety, both to prevent accidents and to investigate the root cause of accidents. In contrast, cybersecurity is a relatively new area within the automotive industry, where regulations have only recently begun to put requirements on vehicle manufacturers.</p>
 
-<p>One topic subject to regulatory requirements is the <strong>digital forensics capability of a vehicle</strong> — a new and unexplored area for the automotive industry. Upcoming regulations, including the EU’s updated Product Liability Directive, are expected to place a greater burden of proof on vehicle manufacturers, requiring them to demonstrate that their products, including cybersecurity features, are free of defects.</p>
+<p>One topic subject to regulatory requirements is the <strong>digital forensics capability of a vehicle</strong> — a new and under-explored area for the automotive industry. Upcoming regulations, including the EU’s updated Product Liability Directive, are expected to place a greater burden of proof on vehicle manufacturers, requiring them to demonstrate that their products, including cybersecurity features, are free of defects.</p>
 
 <p><strong>MAGIC</strong> aims to provide the automotive industry with tools in the form of processes, methods, and mechanisms to aid forensics investigations and support liability investigations throughout the entire vehicle lifecycle — from development to deployment and post-incident analysis.</p>
 
@@ -141,9 +140,8 @@
   <tr><th>Status</th><td><span class="tag tag--success">Active</span></td></tr>
   <tr><th>Project Start</th><td>January 2025</td></tr>
   <tr><th>Duration</th><td>4 years (2025–2028)</td></tr>
-  <tr><th>Total Budget</th><td>~17.7 MSEK (~20.7 MSEK incl. co-funding)</td></tr>
+  <tr><th>Total Budget</th><td>~17.7 MSEK</td></tr>
   <tr><th>Coordinator</th><td><a href="https://www.volvogroup.com/en/" target="_blank" rel="noopener">Volvo Technology AB</a></td></tr>
-  <tr><th>Vice Coordinator</th><td><a href="https://www.chalmers.se/en/" target="_blank" rel="noopener">Chalmers University of Technology</a></td></tr>
   <tr><th>FFI Programme</th><td>Safe Automated Driving (Trafiksäker automatisering)</td></tr>
 </table>
 
@@ -191,7 +189,7 @@
           <li><a href="/about/">About MAGIC</a></li>
           <li><a href="/work-packages/">Work Packages</a></li>
           <li><a href="/partners/">Partners</a></li>
-          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/results/">Results</a></li>
         </ul>
       </div>
 
@@ -223,6 +221,7 @@
         <span>&#127745;</span>
         <span>Funded by <a href="https://ffisweden.se/en/" target="_blank" rel="noopener">FFI &mdash; Fordonsstrategisk forskning och innovation</a></span>
       </div>
+      <p class="footer-disclaimer">Vinnova is not responsible for the content on this website or any use that may be made of the information it contains.</p>
     </div>
   </div>
 </footer>
@@ -257,11 +256,11 @@
       var typeMatch = bib.match(/^@(\w+)\s*\{/);
       var type = typeMatch ? typeMatch[1].toLowerCase() : '';
       var fields = {};
-      // Match field = {value} or field =  patterns
-      var re = /(\w+)\s*=\s*\{((?:[^{}]|\{[^{}]*\})*)\}/g;
+      // Match field = {value}, field = , or field = "value" patterns
+      var re = /(\w+)\s*=\s*(?:\{((?:[^{}]|\{[^{}]*\})*)\}|"([^"]*)")/g;
       var m;
       while ((m = re.exec(bib)) !== null) {
-        fields[m[1].toLowerCase()] = m[2].trim();
+        fields[m[1].toLowerCase()] = (m[2] !== undefined ? m[2] : m[3]).trim();
       }
       return { type: type, fields: fields };
     }
