@@ -1,0 +1,12 @@
+{
+  "name": "MAGIC — Meeting Automotive Liability Challenges through Forensics Soundness",
+  "short_name": "MAGIC",
+  "description": "FFI-funded Swedish automotive cybersecurity research project",
+  "icons": [
+    { "src": "android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0d2340",
+  "background_color": "#0d2340",
+  "display": "standalone"
+}

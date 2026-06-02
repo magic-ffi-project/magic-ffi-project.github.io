@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Open Graph -->
+  <meta property="og:image" content="{{ '/assets/img/hero.jpg' | absolute_url }}">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/icons/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/icons/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/icons/favicon-16x16.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/icons/apple-touch-icon.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/assets/icons/site.webmanifest' | relative_url }}">
+  <meta name="theme-color" content="#0d2340">
+
+  {% seo %}
+</head>
+<body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+
+  {% include header.html %}
+
+  <main id="main-content">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <!-- Citation modal -->
+  <div id="cite-modal" hidden>
+    <div class="cite-backdrop" onclick="hideCite()"></div>
+    <div class="cite-box">
+      <h4>BibTeX</h4>
+      <pre id="cite-bibtex"></pre>
+      <div class="cite-box__actions">
+        <button id="copy-btn" class="btn btn--primary" onclick="copyCite()">Copy</button>
+        <button class="btn btn--outline-dark" onclick="hideCite()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Highlight active nav item based on current path
+    (function() {
+      var path = window.location.pathname;
+      document.querySelectorAll('.site-nav a').forEach(function(a) {
+        if (a.getAttribute('href') !== '/' && path.startsWith(a.getAttribute('href'))) {
+          a.classList.add('active');
+        }
+      });
+    })();
+
+    // BibTeX parser: extract fields from a BibTeX string
+    function parseBibtex(bib) {
+      var typeMatch = bib.match(/^@(\w+)\s*\{/);
+      var type = typeMatch ? typeMatch[1].toLowerCase() : '';
+      var fields = {};
+      // Match field = {value} or field = {{value}} patterns
+      var re = /(\w+)\s*=\s*\{((?:[^{}]|\{[^{}]*\})*)\}/g;
+      var m;
+      while ((m = re.exec(bib)) !== null) {
+        fields[m[1].toLowerCase()] = m[2].trim();
+      }
+      return { type: type, fields: fields };
+    }
+
+    // Render IEEE citation HTML from parsed BibTeX
+    function ieeeFromBibtex(bib) {
+      var parsed = parseBibtex(bib);
+      var t = parsed.type, f = parsed.fields;
+      // Strip protective braces from title (e.g. {ACHILLES} -> ACHILLES)
+      var title = (f.title || '').replace(/\{([^}]*)\}/g, '$1');
+      var author = f.author || '';
+      var cite = author + ', \u201c' + title + ',\u201d';
+      if (t === 'inproceedings') {
+        cite += ' <em>' + (f.booktitle || '') + '</em>';
+        if (f.address) cite += ', ' + f.address;
+        if (f.year)    cite += ', ' + f.year;
+        if (f.pages)   cite += ', pp.\u00a0' + f.pages.replace('--', '\u2013');
+      } else if (t === 'article') {
+        cite += ' in <em>' + (f.journal || '') + '</em>';
+        if (f.year) cite += ', ' + f.year;
+      }
+      if (f.doi) {
+        cite += ', doi: ' + f.doi;
+      }
+      return cite + '.';
+    }
+
+    // Render all pub-items on the page
+    function renderCitations() {
+      document.querySelectorAll('.pub-item').forEach(function(item) {
+        var pre = item.querySelector('.bibtex-content');
+        if (!pre) return;
+        var bib = pre.textContent.trim();
+        // Fill citation
+        var ref = item.querySelector('.pub-ref');
+        if (ref) ref.innerHTML = ieeeFromBibtex(bib);
+        // Build action buttons
+        var actions = item.querySelector('.pub-actions');
+        if (actions) {
+          var citeBtn = document.createElement('button');
+          citeBtn.className = 'btn-cite';
+          citeBtn.textContent = 'Cite';
+          citeBtn.onclick = function() { showCite(citeBtn); };
+          actions.appendChild(citeBtn);
+          var pdfHref = item.getAttribute('data-pdf');
+          // Fallback to DOI link if no PDF
+          if (!pdfHref) {
+            var parsed = parseBibtex(bib);
+            if (parsed.fields.doi) pdfHref = null;
+            var doi = parsed.fields.doi;
+            var link = document.createElement('a');
+            link.className = 'btn-pdf';
+            link.target = '_blank';
+            link.rel = 'noopener';
+            link.innerHTML = 'DOI &#x2197;';
+            link.href = 'https://doi.org/' + doi;
+            actions.appendChild(link);
+          } else {
+            var link = document.createElement('a');
+            link.className = 'btn-pdf';
+            link.target = '_blank';
+            link.rel = 'noopener';
+            link.innerHTML = 'PDF &#x2197;';
+            link.href = pdfHref;
+            actions.appendChild(link);
+          }
+        }
+      });
+    }
+    document.addEventListener('DOMContentLoaded', renderCitations);
+
+    // Citation modal
+    function showCite(btn) {
+      var bib = btn.closest('.pub-item').querySelector('.bibtex-content');
+      document.getElementById('cite-bibtex').textContent = bib.textContent.trim();
+      document.getElementById('cite-modal').removeAttribute('hidden');
+    }
+    function hideCite() {
+      document.getElementById('cite-modal').setAttribute('hidden', '');
+      document.getElementById('copy-btn').textContent = 'Copy';
+    }
+    function copyCite() {
+      navigator.clipboard.writeText(document.getElementById('cite-bibtex').textContent).then(function() {
+        var btn = document.getElementById('copy-btn');
+        btn.textContent = 'Copied!';
+        setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
+      });
+    }
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') hideCite(); });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+title: MAGIC
+subtitle: Meeting Automotive Liability Challenges through Forensics Soundness
+description: >-
+  MAGIC is a Swedish FFI-funded research project developing automotive digital
+  forensics (ADF) solutions to support liability investigations in vehicle incidents,
+  enhance cybersecurity resilience, and ensure forensic soundness.
+baseurl: ""
+url: "https://magic-ffi-project.github.io"
+
+lang: en
+
+# Project meta
+project:
+  acronym: MAGIC
+  full_name: Meeting Automotive Liability Challenges through Forensics Soundness
+  funder: "FFI — Fordonsstrategisk forskning och innovation"
+  funder_url: "https://ffisweden.se/en/"
+  vinnova_nr: "2024-03687"
+  start: "2025-01-01"
+  duration: "4 years (2025–2028)"
+  budget: "~17.7 MSEK"
+  coordinator: "Volvo Technology AB"
+  email: "magic@magic-ffi-project.github.io"
+
+collections:
+  news:
+    output: true
+    permalink: /news/:name/
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - "*.gemspec"

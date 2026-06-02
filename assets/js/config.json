@@ -1,0 +1,16 @@
+{
+    "map": {
+        "map_provider": "OpenStreetMap.Mapnik",
+        "home_coord": [40.830145,14.246909],
+        "default_zoom": 18
+    },
+
+    
+
+    "lang": {
+        "map": {
+            "focus_conf": "Center map on conference location",
+            "focus_me": "Show my current location"
+        }
+    }
+}

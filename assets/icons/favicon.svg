@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Navy background with rounded corners -->
+  <rect width="64" height="64" rx="8" fill="#0d2340"/>
+  <!-- Blue accent strip -->
+  <polygon points="9,50 55,50 55,56 9,56" fill="#2563eb"/>
+  <!-- Bold M letterform -->
+  <polygon points="9,52 9,12 18,12 32,36 46,12 55,12 55,52 46,52 46,28 32,46 18,28 18,52" fill="#ffffff"/>
+</svg>

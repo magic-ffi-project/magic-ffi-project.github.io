@@ -1,0 +1,47 @@
+- id: D2.1
+  title: Report on Industrial Needs and Use Cases
+  wp: WP2
+  due: Dec 2026
+  # pdf: d2.1-industrial-needs.pdf
+
+- id: D2.2
+  title: State-of-the-Art Report
+  wp: WP2
+  due: Dec 2026
+  # pdf: d2.2-state-of-the-art.pdf
+
+- id: D3.1
+  title: ADF-Supported Architecture with Requirements and Guidelines
+  wp: WP3
+  due: Dec 2027
+  # pdf: d3.1-adf-architecture.pdf
+
+- id: D4.1
+  title: Forensic Soundness and Data Collection for ADF
+  wp: WP4
+  due: Dec 2027
+  # pdf: d4.1-forensic-soundness.pdf
+
+- id: D4.2
+  title: Enhanced IDS Methodologies for ADF
+  wp: WP4
+  due: Dec 2028
+  # pdf: d4.2-ids-methodologies.pdf
+
+- id: D5.1
+  title: Management of Digital Evidence
+  wp: WP5
+  due: Dec 2027
+  # pdf: d5.1-digital-evidence.pdf
+
+- id: D5.2
+  title: ADF and IDS Maintainability and Online Adaptation
+  wp: WP5
+  due: Dec 2028
+  # pdf: d5.2-maintainability.pdf
+
+- id: D5.3
+  title: Evaluation of Resilient ADF Mechanisms
+  wp: WP5
+  due: Dec 2028
+  # pdf: d5.3-resilient-adf.pdf

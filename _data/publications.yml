@@ -1,0 +1,31 @@
+- key: mowla2026benchmarking
+  # pdf: "mowla2026benchmarking.pdf"
+  bibtex: |
+    @INPROCEEDINGS{11467947,
+    author={Mowla, Nishat I and Rosell, Joakim and Abedin, Sarder Fakhrul},
+    booktitle={2026 International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA)},
+    title={Benchmarking Explainable Machine Learning Models for Automotive Intrusion Detection},
+    year={2026},
+    volume={},
+    number={},
+    pages={1-6},
+    keywords={Payloads;Feeds;Central Processing Unit;Internet of Things;Radio frequency;Communication systems;Protocols;Communications technology;Internet;Internet of Vehicles;Vehicular Network;Intrusion Detection System;XAI;Machine Learning;Network Attacks},
+    doi={10.1109/ACDSA67686.2026.11467947}
+    }
+
+
+- key: mowla2026achilles
+  # pdf: "mowla2026achilles.pdf"
+  bibtex: |
+    @ARTICLE{11523163,
+    author={Mowla, Nishat I. and Thar, Kyi and Abedin, Sarder Fakhrul and Mahmood, Aamir and Han, Zhu and Gidlund, Mikael and Fahria, Kabir and Giapantzis, Konstantinos and Lalas, Antonios and Rosell, Joakim and Moghadam, Mahshid Helali},
+    journal={IEEE Transactions on Intelligent Transportation Systems},
+    title={ACHILLES: A Machine Learning Framework for Explainable and Generalized Automotive Intrusion Detection System},
+    year={2026},
+    volume={},
+    number={},
+    pages={1-16},
+    keywords={Modeling;Automotive engineering;Metalearning;Training;Controller area networks;Vehicles;Timing;Radio frequency;Testing;Machine learning;In-vehicle networks (IVNs);automotive intrusion detection;generalizability;explainable AI (XAI)},
+    doi={10.1109/TITS.2026.3688299}
+    }
+
