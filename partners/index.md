@@ -12,15 +12,15 @@ MAGIC is coordinated by **Volvo Technology AB** and brings together six partners
     <div class="partner-logo-placeholder">VT</div>
     <span class="partner-role">Coordinator</span>
     <h3>Volvo Technology AB</h3>
-    <p>Project coordinator and WP1 leader. Part of the Volvo Group, Volvo Technology AB provides deep industrial expertise in automotive systems engineering and cybersecurity. Coordinator: Prakash Jayaraman.</p>
+    <p>Project coordinator, WP1 and WP2 leader. Part of the Volvo Group, Volvo Technology AB provides deep industrial expertise in automotive systems engineering and cybersecurity.</p>
     <a class="partner-link" href="https://www.volvogroup.com/en/" target="_blank" rel="noopener">volvogroup.com &rarr;</a>
   </div>
 
-  <div class="partner-card coordinator">
+  <div class="partner-card">
     <div class="partner-logo-placeholder">CH</div>
-    <span class="partner-role">Vice Coordinator</span>
+    <span class="partner-role">Partner</span>
     <h3>Chalmers University of Technology</h3>
-    <p>Sweden's leading technical university, providing academic leadership, research excellence in cybersecurity, dependable systems, and formal methods. Vice project leader for MAGIC.</p>
+    <p>Sweden's leading technical university, providing academic leadership, research excellence in cybersecurity, dependable systems, and formal methods. WP6 leader for MAGIC.</p>
     <a class="partner-link" href="https://www.chalmers.se/en/" target="_blank" rel="noopener">chalmers.se &rarr;</a>
   </div>
 
@@ -36,7 +36,7 @@ MAGIC is coordinated by **Volvo Technology AB** and brings together six partners
     <div class="partner-logo-placeholder">RI</div>
     <span class="partner-role">Partner</span>
     <h3>RISE Research Institutes of Sweden</h3>
-    <p>Sweden's independent national research institute. WP4 and WP5 leader. Expertise in dependability, cybersecurity, digital forensics, and applied automotive research. RISE contact: <a href="https://www.ri.se/en/person/behrooz-sangchoolie" target="_blank" rel="noopener">Behrooz Sangchoolie</a>.</p>
+    <p>Sweden's independent national research institute. WP4 and WP5 leader. Expertise in dependability, cybersecurity, digital forensics, and applied automotive research.</p>
     <a class="partner-link" href="https://www.ri.se/en" target="_blank" rel="noopener">ri.se &rarr;</a>
   </div>
 

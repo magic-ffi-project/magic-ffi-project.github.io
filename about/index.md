@@ -12,7 +12,7 @@ description: Meeting Automotive Liability Challenges through Forensics Soundness
 
 The vehicle industry has a long tradition of working actively with safety, both to prevent accidents and to investigate the root cause of accidents. In contrast, cybersecurity is a relatively new area within the automotive industry, where regulations have only recently begun to put requirements on vehicle manufacturers.
 
-One topic subject to regulatory requirements is the **digital forensics capability of a vehicle** — a new and unexplored area for the automotive industry. Upcoming regulations, including the EU's updated Product Liability Directive, are expected to place a greater burden of proof on vehicle manufacturers, requiring them to demonstrate that their products, including cybersecurity features, are free of defects.
+One topic subject to regulatory requirements is the **digital forensics capability of a vehicle** — a new and under-explored area for the automotive industry. Upcoming regulations, including the EU's updated Product Liability Directive, are expected to place a greater burden of proof on vehicle manufacturers, requiring them to demonstrate that their products, including cybersecurity features, are free of defects.
 
 **MAGIC** aims to provide the automotive industry with tools in the form of processes, methods, and mechanisms to aid forensics investigations and support liability investigations throughout the entire vehicle lifecycle — from development to deployment and post-incident analysis.
 
@@ -63,9 +63,8 @@ MAGIC will ensure the **forensic soundness** of preserved and collected data whe
   <tr><th>Status</th><td><span class="tag tag--success">Active</span></td></tr>
   <tr><th>Project Start</th><td>January 2025</td></tr>
   <tr><th>Duration</th><td>4 years (2025–2028)</td></tr>
-  <tr><th>Total Budget</th><td>~17.7 MSEK (~20.7 MSEK incl. co-funding)</td></tr>
+  <tr><th>Total Budget</th><td>~17.7 MSEK</td></tr>
   <tr><th>Coordinator</th><td><a href="https://www.volvogroup.com/en/" target="_blank" rel="noopener">Volvo Technology AB</a></td></tr>
-  <tr><th>Vice Coordinator</th><td><a href="https://www.chalmers.se/en/" target="_blank" rel="noopener">Chalmers University of Technology</a></td></tr>
   <tr><th>FFI Programme</th><td>Safe Automated Driving (Trafiksäker automatisering)</td></tr>
 </table>
 

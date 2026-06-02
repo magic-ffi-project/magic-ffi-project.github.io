@@ -1,3 +1,25 @@
+- key: kim2025advances
+  url: "https://link.springer.com/chapter/10.1007/978-3-032-00627-1_13"
+  bibtex: |
+    @InProceedings{10.1007/978-3-032-00627-1_13,
+    author="Strandberg, Kim
+    and Eldefrawy, Mohamed",
+    editor="Dalla Preda, Mila
+    and Schrittwieser, Sebastian
+    and Naessens, Vincent
+    and De Sutter, Bjorn",
+    title="Advances in Automotive Digital Forensics: Recent Trends and Future Directions",
+    booktitle="Availability, Reliability and Security",
+    year="2025",
+    publisher="Springer Nature Switzerland",
+    address="Cham",
+    pages="252--274",
+    abstract="The automotive industry is increasingly facing growing cybersecurity challenges as vehicles become more connected and autonomous. Modern cars equipped with sophisticated electronic systems are becoming more susceptible to cyber threats. Enhancing detection and forensic capabilities within automotive systems is essential to mitigate these risks. This work builds on and extends a previous systematic literature review of automotive digital forensics, covering 2006 to early 2021. However, recent advances in the field have introduced new challenges and opportunities, particularly in light of an evolving, dynamic threat landscape and growing vehicle complexity. These developments have driven numerous advances, particularly in artificial intelligence, machine learning, and blockchain technologies. In response, we review the latest state-of-the-art developments from 2021 to 2025, addressing critical challenges and technical solutions to provide a comprehensive understanding of the evolving landscape and its implications for both researchers and practitioners. By categorizing and comparing these advancements with prior research, we highlight key trends and innovations, analyze security concerns, and ultimately offer valuable insights into future research directions and emerging trends.",
+    isbn="978-3-032-00627-1",
+    doi="10.1007/978-3-032-00627-1_13"
+    }
+
+
 - key: mowla2026benchmarking
   # pdf: "mowla2026benchmarking.pdf"
   bibtex: |

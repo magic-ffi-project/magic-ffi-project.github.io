@@ -1,8 +1,7 @@
 <header class="site-header">
   <div class="container">
     <a class="site-logo" href="{{ '/' | relative_url }}">
-      <span class="site-logo__acronym">MAGIC</span>
-      <span class="site-logo__tagline">Meeting Automotive Liability<br>Challenges through Forensics</span>
+      <img src="{{ '/assets/icons/Logo_MAGIC.png' | relative_url }}" alt="MAGIC — Meeting Automotive Liability Challenges through Forensics Soundness" class="site-logo__img">
     </a>
 
     <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.site-nav').classList.toggle('is-open')">
@@ -14,7 +13,7 @@
       <a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about' %} class="active"{% endif %}>About</a>
       <a href="{{ '/work-packages/' | relative_url }}"{% if page.url contains '/work-packages' %} class="active"{% endif %}>Work Packages</a>
       <a href="{{ '/partners/' | relative_url }}"{% if page.url contains '/partners' %} class="active"{% endif %}>Partners</a>
-      <a href="{{ '/publications/' | relative_url }}"{% if page.url contains '/publications' %} class="active"{% endif %}>Publications</a>
+      <a href="{{ '/results/' | relative_url }}"{% if page.url contains '/results' %} class="active"{% endif %}>Results</a>
       <a href="{{ '/contact/' | relative_url }}"{% if page.url contains '/contact' %} class="active"{% endif %}>Contact</a>
     </nav>
   </div>

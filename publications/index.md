@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Publications
+title: Results
 description: Research outputs, reports, and deliverables from the MAGIC project.
+permalink: /results/
 ---
 
 The MAGIC project (2025–2028) is actively producing research results. This page will be updated as publications, deliverables, and datasets are released.
@@ -25,7 +26,7 @@ The MAGIC project (2025–2028) is actively producing research results. This pag
       <td>{{ d.wp }}</td>
       <td>
         {% if d.pdf %}
-          <a class="btn-pdf" href="{{ '/publications/' | relative_url }}{{ d.pdf }}" target="_blank" rel="noopener">Completed &#x2197;</a>
+          <a class="btn-pdf" href="{{ '/results/' | relative_url }}{{ d.pdf }}" target="_blank" rel="noopener">Completed &#x2197;</a>
         {% else %}
           <span class="tag">Planned ({{ d.due }})</span>
         {% endif %}
@@ -41,7 +42,7 @@ The MAGIC project (2025–2028) is actively producing research results. This pag
 
 <div class="pub-list">
 {% for pub in site.data.publications %}
-  <div class="pub-item"{% if pub.pdf %} data-pdf="{{ '/publications/' | relative_url }}{{ pub.pdf }}"{% endif %}>
+  <div class="pub-item"{% if pub.pdf %} data-pdf="{{ '/results/' | relative_url }}{{ pub.pdf }}"{% endif %}>
     <p class="pub-ref"></p>
     <div class="pub-actions"></div>
     <pre class="bibtex-content" hidden>{{ pub.bibtex }}</pre>

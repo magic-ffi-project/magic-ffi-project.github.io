@@ -5,24 +5,13 @@ description: Get in touch with the MAGIC project team.
 body_class: contact-page
 ---
 
-For enquiries about the MAGIC project — research collaboration, press, or general information — please reach out to the relevant contact below.
+For enquiries about the MAGIC project — research collaboration, press, or general information — please reach out to the project coordinator.
 
-## Project contacts
+## Project Coordinator
 
-<table class="info-table">
-  <colgroup>
-    <col style="width: 70%">
-    <col style="width: 30%">
-  </colgroup>
-  <tbody>
-    <tr><td>Volvo Technology AB (Coordinator)</td><td><a href="https://www.volvogroup.com/en/" target="_blank" rel="noopener">volvogroup.com</a></td></tr>
-    <tr><td>Chalmers University of Technology</td><td><a href="https://www.chalmers.se/en/" target="_blank" rel="noopener">chalmers.se</a></td></tr>
-    <tr><td>Volvo Car Group</td><td><a href="https://www.volvocars.com/" target="_blank" rel="noopener">volvocars.com</a></td></tr>
-    <tr><td>RISE Research Institutes of Sweden</td><td><a href="https://www.ri.se/en" target="_blank" rel="noopener">ri.se</a></td></tr>
-    <tr><td>AFRY AB</td><td><a href="https://afry.com/en" target="_blank" rel="noopener">afry.com</a></td></tr>
-    <tr><td>Clavister AB</td><td><a href="https://www.clavister.com/" target="_blank" rel="noopener">clavister.com</a></td></tr>
-  </tbody>
-</table>
+**Volvo Technology AB**
+
+Prakash Jayaraman — [prakash.jayaraman@volvo.com](mailto:prakash.jayaraman@volvo.com)
 
 ---
 

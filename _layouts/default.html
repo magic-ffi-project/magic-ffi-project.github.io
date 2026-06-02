@@ -63,11 +63,11 @@
       var typeMatch = bib.match(/^@(\w+)\s*\{/);
       var type = typeMatch ? typeMatch[1].toLowerCase() : '';
       var fields = {};
-      // Match field = {value} or field = {{value}} patterns
-      var re = /(\w+)\s*=\s*\{((?:[^{}]|\{[^{}]*\})*)\}/g;
+      // Match field = {value}, field = {{value}}, or field = "value" patterns
+      var re = /(\w+)\s*=\s*(?:\{((?:[^{}]|\{[^{}]*\})*)\}|"([^"]*)")/g;
       var m;
       while ((m = re.exec(bib)) !== null) {
-        fields[m[1].toLowerCase()] = m[2].trim();
+        fields[m[1].toLowerCase()] = (m[2] !== undefined ? m[2] : m[3]).trim();
       }
       return { type: type, fields: fields };
     }

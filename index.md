@@ -11,7 +11,7 @@ description: Meeting Automotive Liability Challenges through Forensics Soundness
   <div class="container">
     <div class="hero__content">
       <div class="hero__badge">
-        <span>&#x1F6E1;</span> FFI-Funded Research Project &middot; Vinnova 2024-03687
+        <a href="https://www.vinnova.se/p/magic---mota-fordonsindustrins-ansvarsutmaningar-med-tillforlitlig-digital-forensik" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;"><span>&#x1F6E1;</span> FFI-Funded Research Project &middot; Vinnova 2024-03687</a>
       </div>
       <h1>
         <span class="hero__acronym">MAGIC</span><br>
@@ -62,7 +62,7 @@ description: Meeting Automotive Liability Challenges through Forensics Soundness
     <div class="section__header">
       <span class="section__label">About the Project</span>
       <h2>Advancing Automotive Digital Forensics</h2>
-      <p>The vehicle industry has a long tradition of working with safety, but cybersecurity forensics is a new and unexplored area. MAGIC bridges this gap.</p>
+      <p>The vehicle industry has a long tradition of working with safety, but cybersecurity forensics is a new and under-explored area. MAGIC bridges this gap.</p>
     </div>
     <div class="card-grid card-grid--2">
       <div class="card card--accent">
@@ -191,14 +191,14 @@ description: Meeting Automotive Liability Challenges through Forensics Soundness
         <div class="partner-logo-placeholder">VT</div>
         <span class="partner-role">Coordinator</span>
         <h3>Volvo Technology AB</h3>
-        <p>Project lead and WP1 leader. Industrial expertise in automotive systems and cybersecurity.</p>
+        <p>Project lead, WP1 and WP2 leader. Industrial expertise in automotive systems and cybersecurity.</p>
         <a class="partner-link" href="https://www.volvogroup.com/en/" target="_blank" rel="noopener">volvogroup.com &rarr;</a>
       </div>
-      <div class="partner-card coordinator">
+      <div class="partner-card">
         <div class="partner-logo-placeholder">CH</div>
-        <span class="partner-role">Vice Coordinator</span>
+        <span class="partner-role">Partner</span>
         <h3>Chalmers University of Technology</h3>
-        <p>Academic leadership and research excellence in cybersecurity and dependable systems.</p>
+        <p>WP6 leader. Academic leadership and research excellence in cybersecurity and dependable systems.</p>
         <a class="partner-link" href="https://www.chalmers.se/en/" target="_blank" rel="noopener">chalmers.se &rarr;</a>
       </div>
       <div class="partner-card">
