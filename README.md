@@ -20,12 +20,12 @@ On Ubuntu/Debian, install system dependencies first (required to compile native 
 sudo apt install ruby-dev ruby-bundler build-essential
 ```
 
-Then install project gems locally and serve:
+Then, from the repository root, install gems (dependencies) and serve:
 
 ```bash
-bundle config set --local path 'vendor/bundle'   # keep gems inside the project
+bundle config set --local path 'vendor/bundle'    # keep gems inside the project folder (rather than system-wide)
 bundle install                                    # install dependencies
-bundle exec jekyll serve --livereload
+bundle exec jekyll serve --livereload             # start the local web server (livereload enables automatic refreshes when files change)
 ```
 
 Open http://localhost:4000 to preview the site.
