@@ -4,6 +4,8 @@ Official website for the MAGIC research project, an FFI-funded Swedish automotiv
 
 **Live site:** https://magic-ffi-project.github.io
 
+> **Disclaimer:** Large parts of this website were created with the assistance of Claude AI and have subsequently been reviewed and refined by the project team.
+
 ## Project overview
 
 MAGIC develops automotive digital forensics (ADF) solutions to support liability investigations in vehicle incidents, enhance cybersecurity resilience, and ensure forensic soundness across the vehicle lifecycle (2025–2028).
