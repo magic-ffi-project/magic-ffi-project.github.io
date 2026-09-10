@@ -38,7 +38,7 @@ The MAGIC project (2025–2028) is actively producing research results. This pag
 
 ---
 
-## Peer-Reviewed Publications
+## Publications & Reports
 
 <div class="pub-list">
 {% for pub in site.data.publications %}
