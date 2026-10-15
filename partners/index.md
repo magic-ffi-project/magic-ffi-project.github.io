@@ -21,7 +21,7 @@ MAGIC is coordinated by **Volvo Technology AB** and brings together six partners
     <span class="partner-role">Partner</span>
     <h3>Chalmers University of Technology</h3>
     <p>Sweden's leading technical university, providing academic leadership, research excellence in cybersecurity, dependable systems, and formal methods. WP6 leader for MAGIC.</p>
-    <a class="partner-link" href="https://research.chalmers.se/project/11930" target="_blank" rel="noopener">chalmers.se &rarr;</a>
+    <a class="partner-link" href="https://research.chalmers.se/en/project/11930" target="_blank" rel="noopener">chalmers.se &rarr;</a>
   </div>
 
   <div class="partner-card">
