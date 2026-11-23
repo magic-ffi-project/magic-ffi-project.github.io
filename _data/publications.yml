@@ -1,7 +1,7 @@
 - key: kim2026
   url: "https://www.sciencedirect.com/science/article/pii/S0167404825004407"
   bibtex: |
-    @article{HAGEN2026104751,
+    @article{104751,
     title = {Towards a formal verification of secure vehicle software updates},
     journal = {Computers & Security},
     volume = {161},
@@ -19,7 +19,7 @@
 - key: mowla2026achilles
   # pdf: "mowla2026achilles.pdf"
   bibtex: |
-    @ARTICLE{11523163,
+    @ARTICLE{3688299,
     author={Mowla, Nishat I. and Thar, Kyi and Abedin, Sarder Fakhrul and Mahmood, Aamir and Han, Zhu and Gidlund, Mikael and Fahria, Kabir and Giapantzis, Konstantinos and Lalas, Antonios and Rosell, Joakim and Moghadam, Mahshid Helali},
     journal={IEEE Transactions on Intelligent Transportation Systems},
     title={ACHILLES: A Machine Learning Framework for Explainable and Generalized Automotive Intrusion Detection System},
