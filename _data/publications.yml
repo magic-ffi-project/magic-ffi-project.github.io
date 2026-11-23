@@ -52,12 +52,8 @@
   url: "https://link.springer.com/chapter/10.1007/978-3-032-00627-1_13"
   bibtex: |
     @InProceedings{978-3-032-00627-1_13,
-    author="Strandberg, Kim
-    and Eldefrawy, Mohamed",
-    editor="Dalla Preda, Mila
-    and Schrittwieser, Sebastian
-    and Naessens, Vincent
-    and De Sutter, Bjorn",
+    author="Strandberg, Kim and Eldefrawy, Mohamed",
+    editor="Dalla Preda, Mila and Schrittwieser, Sebastian and Naessens, Vincent and De Sutter, Bjorn",
     title="Advances in Automotive Digital Forensics: Recent Trends and Future Directions",
     booktitle="Availability, Reliability and Security",
     year="2025",
